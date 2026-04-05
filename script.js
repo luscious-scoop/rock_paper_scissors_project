@@ -17,10 +17,12 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  let playerChoice = prompt("Chose  Rock , Paper or Scissors ").toLowerCase();
-  return playerChoice;
+  let humanScore = prompt("Chose  Rock , Paper or Scissors ").toLowerCase();
+  return humanChoice;
 }
 
 function showScore() {
   console.log(`Player score: ${humanScore}. Computer Score: ${computerScore}`);
 }
+
+function playRound(humanScore) {}
