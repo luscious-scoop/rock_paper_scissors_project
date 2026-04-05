@@ -20,3 +20,19 @@ function getHumanChoice() {
   let playerChoice = prompt("Chose  Rock , Paper or Scissors ").toLowerCase();
   return playerChoice;
 }
+
+function showScore() {
+  console.log(`Player score: ${humanScore}. Computer Score: ${computerScore}`);
+}
+
+function playRound(computerChoice, playerChoice) {
+  if (computerChoice === playerChoice) {
+    console.log("It's a Tie!");
+  } else if (playerChoice === "rock") {
+    if (computerChoice === "Paper") {
+      console.log(
+        `You Won! You picked ${playerChoice} and computer picked ${computerChoice}`,
+      );
+    }
+  }
+}
