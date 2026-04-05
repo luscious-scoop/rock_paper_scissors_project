@@ -30,7 +30,7 @@ function showMessage() {
     );
   } else if (result === "Lose") {
     console.log(
-      `You picked ${playerChoiceChoice}. Computer picked ${computerChoice}. It's a Lose!`,
+      `You picked ${playerChoice}. Computer picked ${computerChoice}. It's a Lose!`,
     );
   }
 }
