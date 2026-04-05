@@ -18,14 +18,18 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  let humanScore = prompt("Chose  Rock , Paper or Scissors ").toLowerCase();
+  let humanChoice = prompt("Chose  Rock , Paper or Scissors ").toLowerCase();
   return humanChoice;
 }
 
 function showScore() {
   console.log(`Player score: ${humanScore}. Computer Score: ${computerScore}`);
 }
-function showMessage() {}
+function showMessage(result) {
+  if (result === "Tie") {
+    return console.log(``);
+  }
+}
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice.toLowerCase()) {
     result = "Tie";
