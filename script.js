@@ -25,37 +25,61 @@ function getHumanChoice() {
 function showScore() {
   console.log(`Player score: ${humanScore}. Computer Score: ${computerScore}`);
 }
-function showMessage(result) {
-  if (result === "Tie") {
-    return console.log(``);
-  }
-}
+
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice.toLowerCase()) {
     result = "Tie";
+    console.log(
+      `You picked ${humanChoice}. Computer picked ${computerChoice}. It's a Tie!`,
+    );
+    showScore();
   } else if (humanChoice === "rock") {
     if (computerChoice === "Paper") {
       result = "Lose";
       computerScore++;
+      console.log(
+        `You picked ${humanChoice}. Computer picked ${computerChoice}. It's a Lose!`,
+      );
+      showScore();
     } else if (computerChoice === "Scissors") {
       result = "Win";
-      humanScore;
+      humanScore++;
+      console.log(
+        `You picked ${humanChoice}. Computer picked ${computerChoice}. It's a Win!`,
+      );
+      showScore();
     }
   } else if (humanChoice === "paper") {
     if (computerChoice === "Scissors") {
       result = "Lose";
       computerScore++;
+      console.log(
+        `You picked ${humanChoice}. Computer picked ${computerChoice}. It's a Lose!`,
+      );
+      showScore();
     } else if (computerChoice === "Rock") {
       result = "Win";
       humanScore++;
+      console.log(
+        `You picked ${humanChoice}. Computer picked ${computerChoice}. It's a Win!`,
+      );
+      showScore();
     }
   } else if (humanChoice === "scissors") {
     if (computerChoice === "Paper") {
       result = "Win";
       humanScore++;
+      console.log(
+        `You picked ${humanChoice}. Computer picked ${computerChoice}. It's a Win!`,
+      );
+      showScore();
     } else if (computerChoice === "Rock") {
       result = "Lose";
       computerScore++;
+      console.log(
+        `You picked ${humanChoice}. Computer picked ${computerChoice}. It's a Lose!`,
+      );
+      showScore();
     }
   }
 }
