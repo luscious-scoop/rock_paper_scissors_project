@@ -24,15 +24,3 @@ function getHumanChoice() {
 function showScore() {
   console.log(`Player score: ${humanScore}. Computer Score: ${computerScore}`);
 }
-
-function playRound(computerChoice, playerChoice) {
-  if (computerChoice.toLowerCase() === playerChoice) {
-    console.log("It's a Tie!");
-  } else if (playerChoice === "rock") {
-    if (computerChoice === "Paper") {
-      console.log(
-        `You Lost! You picked ${playerChoice} and computer picked ${computerChoice}`,
-      );
-    }
-  }
-}
