@@ -1,6 +1,6 @@
 function getComputerChoice() {
   let randomNumber = Math.random();
-  console.log(randomNumber);
+
   let computerChoice = "";
   if (randomNumber >= 0 && randomNumber < 1 / 4) {
     computerChoice = "Rock";
