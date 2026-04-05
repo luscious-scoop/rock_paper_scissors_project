@@ -1,5 +1,6 @@
 let humanScore = 0;
 let computerScore = 0;
+let result = "";
 
 function getComputerChoice() {
   let randomNumber = Math.random();
@@ -25,4 +26,7 @@ function showScore() {
   console.log(`Player score: ${humanScore}. Computer Score: ${computerScore}`);
 }
 
-function playRound(humanScore) {}
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice === computerChoice.toLowerCase()) {
+  }
+}
