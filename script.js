@@ -1,8 +1,8 @@
 let humanScore = 0;
 let computerScore = 0;
 let result = "";
-let playerChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
+let playerChoice = null;
+let computerChoice = null;
 
 function getComputerChoice() {
   let randomNumber = Math.random();
@@ -87,16 +87,29 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 function playGame() {
+  playerChoice = getHumanChoice();
+  computerChoice = getComputerChoice();
   playRound(playerChoice, computerChoice);
+  playerChoice = getHumanChoice();
+  computerChoice = getComputerChoice();
+
   playRound(playerChoice, computerChoice);
+  playerChoice = getHumanChoice();
+  computerChoice = getComputerChoice();
   playRound(playerChoice, computerChoice);
+  playerChoice = getHumanChoice();
+  computerChoice = getComputerChoice();
   playRound(playerChoice, computerChoice);
+  playerChoice = getHumanChoice();
+  computerChoice = getComputerChoice();
   playRound(playerChoice, computerChoice);
 
-  if (humanScore === 5) {
-    alert("You Reached 5 Points.It's a Win");
-  } else if (computerChoice === 5) {
-    alert("Computer  Reached 5 Points.It's a Lose");
+  if (humanScore > computerChoice) {
+    alert("It's a victory for the humans ");
+  } else if (computerScore > humanScore) {
+    alert("It's a victory for the Machines.");
+  } else {
+    alert("It's a Tie!");
   }
 }
 
