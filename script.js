@@ -19,6 +19,21 @@ function getComputerChoice() {
   return computerChoice;
 }
 
+function showMessage() {
+  if (result === "Tie") {
+    console.log(
+      `You picked ${playerChoice}. Computer picked ${computerChoice}. It's a Tie!`,
+    );
+  } else if (result === "Win") {
+    console.log(
+      `You picked ${playerChoice}. Computer picked ${computerChoice}. It's a Win!`,
+    );
+  } else if (result === "Lose") {
+    console.log(
+      `You picked ${playerChoiceChoice}. Computer picked ${computerChoice}. It's a Lose!`,
+    );
+  }
+}
 function getHumanChoice() {
   let humanChoice = prompt("Chose  Rock , Paper or Scissors ").toLowerCase();
   return humanChoice;
