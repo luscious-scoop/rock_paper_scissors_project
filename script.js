@@ -86,3 +86,18 @@ function playRound(humanChoice, computerChoice) {
     }
   }
 }
+function playGame() {
+  playRound(playerChoice, computerChoice);
+  playRound(playerChoice, computerChoice);
+  playRound(playerChoice, computerChoice);
+  playRound(playerChoice, computerChoice);
+  playRound(playerChoice, computerChoice);
+
+  if (humanScore === 5) {
+    alert("You Reached 5 Points.It's a Win");
+  } else if (computerChoice === 5) {
+    alert("Computer  Reached 5 Points.It's a Lose");
+  }
+}
+
+playGame();
