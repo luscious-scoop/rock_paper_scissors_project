@@ -26,12 +26,12 @@ function showScore() {
 }
 
 function playRound(computerChoice, playerChoice) {
-  if (computerChoice === playerChoice) {
+  if (computerChoice.toLowerCase() === playerChoice) {
     console.log("It's a Tie!");
   } else if (playerChoice === "rock") {
     if (computerChoice === "Paper") {
       console.log(
-        `You Won! You picked ${playerChoice} and computer picked ${computerChoice}`,
+        `You Lost! You picked ${playerChoice} and computer picked ${computerChoice}`,
       );
     }
   }
