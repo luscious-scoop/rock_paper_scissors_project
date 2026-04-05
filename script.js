@@ -1,6 +1,8 @@
 let humanScore = 0;
 let computerScore = 0;
 let result = "";
+let playerChoice = getHumanChoice();
+let computerChoice = getComputerChoice();
 
 function getComputerChoice() {
   let randomNumber = Math.random();
