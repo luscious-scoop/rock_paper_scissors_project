@@ -25,8 +25,33 @@ function getHumanChoice() {
 function showScore() {
   console.log(`Player score: ${humanScore}. Computer Score: ${computerScore}`);
 }
-
+function showMessage() {}
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice.toLowerCase()) {
+    result = "Tie";
+  } else if (humanChoice === "rock") {
+    if (computerChoice === "Paper") {
+      result = "Lose";
+      computerScore++;
+    } else if (computerChoice === "Scissors") {
+      result = "Win";
+      humanScore;
+    }
+  } else if (humanChoice === "paper") {
+    if (computerChoice === "Scissors") {
+      result = "Lose";
+      computerScore++;
+    } else if (computerChoice === "Rock") {
+      result = "Win";
+      humanScore++;
+    }
+  } else if (humanChoice === "scissors") {
+    if (computerChoice === "Paper") {
+      result = "Win";
+      humanScore++;
+    } else if (computerChoice === "Rock") {
+      result = "Lose";
+      computerScore++;
+    }
   }
 }
