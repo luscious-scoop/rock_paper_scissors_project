@@ -104,12 +104,12 @@ function playGame() {
   computerChoice = getComputerChoice();
   playRound(playerChoice, computerChoice);
 
-  if (humanScore > computerChoice) {
+  if (humanScore > computerScore) {
     alert("It's a victory for the humans ");
   } else if (computerScore > humanScore) {
     alert("It's a victory for the Machines.");
-  } else {
-    alert("It's a Tie!");
+  } else if (humanScore === computerScore) {
+    alert("It's a Tie.");
   }
 }
 
