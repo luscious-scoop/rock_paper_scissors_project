@@ -46,45 +46,33 @@ function showScore() {
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice.toLowerCase()) {
     result = "Tie";
-    showMessage();
-    showScore();
   } else if (humanChoice === "rock") {
     if (computerChoice === "Paper") {
       result = "Lose";
       computerScore++;
-      showMessage();
-      showScore();
     } else if (computerChoice === "Scissors") {
       result = "Win";
       humanScore++;
-      showMessage();
-      showScore();
     }
   } else if (humanChoice === "paper") {
     if (computerChoice === "Scissors") {
       result = "Lose";
       computerScore++;
-      showMessage();
-      showScore();
     } else if (computerChoice === "Rock") {
       result = "Win";
       humanScore++;
-      showMessage();
-      showScore();
     }
   } else if (humanChoice === "scissors") {
     if (computerChoice === "Paper") {
       result = "Win";
       humanScore++;
-      showMessage();
-      showScore();
     } else if (computerChoice === "Rock") {
       result = "Lose";
       computerScore++;
-      showMessage();
-      showScore();
     }
   }
+  showMessage();
+  showScore();
 }
 function playGame() {
   playerChoice = getHumanChoice();
