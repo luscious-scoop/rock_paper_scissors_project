@@ -9,8 +9,8 @@
 }
 
 body {
-  color: white;
-  background-color: #c3c3c3;
+  color: #fffdd0;
+  background-color: #022b3a;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,7 +26,7 @@ img {
 }
 /* =======Buttons======= */
 .btn {
-  background-color: #4c4b63;
+  background-color: #cdd1de;
   border: none;
 
   border-radius: 50%;
@@ -34,8 +34,13 @@ img {
   cursor: pointer;
 } /* 
 =======heading======== */
+.heading {
+  width: 100%;
+  background-color: #e1e5f2;
+  padding: 8px 0px;
+}
 h1 {
-  color: #e9f1f7;
+  color: #404e4d;
   font-weight: 900;
   text-align: center;
   font-size: 50px;
@@ -54,12 +59,14 @@ h1 {
 /* =====result container===== */
 
 .result-container {
-  border: 2px solid red;
+  background-color: #1f7a8c;
+  /*  border: 2px solid red */
   display: flex;
   flex-direction: column;
   width: 450px;
   padding: 16px 8px;
   gap: 20px;
+  border-radius: 12px;
 }
 
 .result-container p {
