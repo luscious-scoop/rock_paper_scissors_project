@@ -3,6 +3,9 @@ let computerScore = 0;
 let result = "";
 let playerChoice = null;
 let computerChoice = null;
+const rockBtn = document.querySelector("#rock-btn");
+const paperBtn = document.querySelector("#paper-btn");
+const scissorsBtn = document.querySelector("#scissors-btn");
 
 function getComputerChoice() {
   let randomNumber = Math.random();
