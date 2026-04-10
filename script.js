@@ -37,9 +37,8 @@ function showMessage() {
     );
   }
 }
-function getHumanChoice() {
-  let humanChoice = prompt("Chose  Rock , Paper or Scissors ").toLowerCase();
-  return humanChoice;
+function getHumanChoice(choice) {
+  return choice;
 }
 
 function showScore() {
@@ -77,31 +76,6 @@ function playRound(humanChoice, computerChoice) {
   showMessage();
   showScore();
 }
-function playGame() {
-  playerChoice = getHumanChoice();
-  computerChoice = getComputerChoice();
-  playRound(playerChoice, computerChoice);
-  playerChoice = getHumanChoice();
-  computerChoice = getComputerChoice();
-
-  playRound(playerChoice, computerChoice);
-  playerChoice = getHumanChoice();
-  computerChoice = getComputerChoice();
-  playRound(playerChoice, computerChoice);
-  playerChoice = getHumanChoice();
-  computerChoice = getComputerChoice();
-  playRound(playerChoice, computerChoice);
-  playerChoice = getHumanChoice();
-  computerChoice = getComputerChoice();
-  playRound(playerChoice, computerChoice);
-
-  if (humanScore > computerScore) {
-    alert("It's a victory for the humans ");
-  } else if (computerScore > humanScore) {
-    alert("It's a victory for the Machines.");
-  } else if (humanScore === computerScore) {
-    alert("It's a Tie.");
-  }
-}
+function playGame() {}
 
 playGame();
