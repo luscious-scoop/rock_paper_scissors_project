@@ -75,3 +75,16 @@ h1 {
 span {
   font-weight: bold;
 }
+
+/* ======moves====== */
+.moves {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.moves-container {
+  font-size: 22px;
+  display: flex;
+  border: 2px solid red;
+  justify-content: space-evenly;
+}
