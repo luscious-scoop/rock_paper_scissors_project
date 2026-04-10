@@ -27,13 +27,14 @@ img {
   cursor: pointer;
 } /* 
 =======heading======== */
-.heading h1 {
+h1 {
   color: #e9f1f7;
   font-weight: 900;
+  text-align: center;
 }
 .container {
   border: 2px solid yellow;
-  min-height: 100vh;
+  /*   min-height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
