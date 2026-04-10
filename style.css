@@ -83,13 +83,15 @@ span {
   gap: 15px;
 }
 .moves-container {
+  padding: 24px 20px;
   font-size: 22px;
   display: flex;
   border: 2px solid red;
-  justify-content: space-evenly;
+  gap: 15px;
 }
 
 .outcome {
   font-size: 24px;
   font-weight: bold;
+  text-align: center;
 }
