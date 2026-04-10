@@ -10,7 +10,7 @@
 
 body {
   background-color: #131b23;
-  min-height: 100vh;
+
   font-family: "Roboto", "sans-serif";
 }
 
@@ -30,4 +30,12 @@ img {
 .heading h1 {
   color: #e9f1f7;
   font-weight: 900;
+}
+.container {
+  border: 2px solid yellow;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
