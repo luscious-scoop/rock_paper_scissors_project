@@ -88,3 +88,8 @@ span {
   border: 2px solid red;
   justify-content: space-evenly;
 }
+
+.outcome {
+  font-size: 24px;
+  font-weight: bold;
+}
