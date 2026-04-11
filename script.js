@@ -4,7 +4,7 @@ let result = "";
 let playerChoice = null;
 let computerChoice = null;
 let draws = 0;
-let userCount = document.querySelector(".");
+
 /* const rockBtn = document.querySelector("#rock-btn");
 const paperBtn = document.querySelector("#paper-btn");
 const scissorsBtn = document.querySelector("#scissors-btn"); */
@@ -54,6 +54,10 @@ function getHumanChoice(choice) {
 
 function showScore() {
   console.log(`Player score: ${humanScore}. Computer Score: ${computerScore}`);
+  let userScore = document.querySelector("#user-score");
+  let computerCount = document.querySelector("#computer-score");
+  userScore.textContent = `User : ${humanScore}`;
+  computerCount.textContent = `Computer ${computerScore}`;
 }
 
 function playRound(humanChoice, computerChoice) {
