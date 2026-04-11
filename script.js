@@ -4,6 +4,7 @@ let result = "";
 let playerChoice = null;
 let computerChoice = null;
 let draws = 0;
+let userCount = document.querySelector(".");
 /* const rockBtn = document.querySelector("#rock-btn");
 const paperBtn = document.querySelector("#paper-btn");
 const scissorsBtn = document.querySelector("#scissors-btn"); */
