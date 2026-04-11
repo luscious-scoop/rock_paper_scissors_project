@@ -3,10 +3,18 @@ let computerScore = 0;
 let result = "";
 let playerChoice = null;
 let computerChoice = null;
-const rockBtn = document.querySelector("#rock-btn");
+/* const rockBtn = document.querySelector("#rock-btn");
 const paperBtn = document.querySelector("#paper-btn");
-const scissorsBtn = document.querySelector("#scissors-btn");
-
+const scissorsBtn = document.querySelector("#scissors-btn"); */
+let buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    playerChoice = button.dataset.name;
+    computerChoice = getComputerChoice();
+    playRound(playerChoice, computerChoice);
+  });
+});
+//don't need to change this
 function getComputerChoice() {
   let randomNumber = Math.random();
 
@@ -76,6 +84,6 @@ function playRound(humanChoice, computerChoice) {
   showMessage();
   showScore();
 }
-function playGame() {}
+function playGame(playerChoice, computerChoice) {}
 
 playGame();
