@@ -86,6 +86,3 @@ function playRound(humanChoice, computerChoice) {
   showMessage();
   showScore();
 }
-function playGame(playerChoice, computerChoice) {}
-
-playGame();
