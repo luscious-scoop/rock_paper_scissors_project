@@ -109,7 +109,10 @@ span {
 }
 
 .reset-btn {
-  display: none;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  display: block;
   color: wheat;
   padding: 18px 48px;
   font-size: 24px;

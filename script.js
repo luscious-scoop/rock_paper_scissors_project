@@ -61,9 +61,6 @@ function showMessage() {
 
   ShowMoves(playerChoice, computerChoice);
 }
-/* function getHumanChoice(choice) {
-  return choice;
-} */
 
 function showScore() {
   let scoreContainer = document.querySelector(".result-container");
