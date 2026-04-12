@@ -32,11 +32,12 @@ function getComputerChoice() {
 
   return computerChoice;
 }
-function ShowPlayerMoves(playerMove, botMove) {
-  const userMove = document.querySelector(".user");
-  const computerMove = document.querySelector(".computer");
-  userMove.textContent = `User: ${playerMove}`;
-  computerMove.textContent = `computer: ${botMove}`;
+function ShowMoves(playerMove, botMove) {
+  let UserMoveImg = document.querySelector(".user-img");
+  let computerMoveImg = document.querySelector(".computer-img");
+
+  UserMoveImg.src = `images/${playerMove}-emoji.png`;
+  computerMoveImg.src = `images/${botMove.toLowerCase()}-emoji.png`;
 }
 
 function showMessage() {
@@ -53,8 +54,8 @@ function showMessage() {
       `You picked ${playerChoice}. Computer picked ${computerChoice}. It's a Lose!`,
     );
   }
-  playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
-  ShowPlayerMoves(playerChoice, computerChoice);
+
+  ShowMoves(playerChoice, computerChoice);
 }
 /* function getHumanChoice(choice) {
   return choice;
