@@ -33,11 +33,13 @@ function getComputerChoice() {
   return computerChoice;
 }
 function ShowMoves(playerMove, botMove) {
+  let movesContainer = document.querySelector(".moves");
   let UserMoveImg = document.querySelector(".user-img");
   let computerMoveImg = document.querySelector(".computer-img");
 
   UserMoveImg.src = `images/${playerMove}-emoji.png`;
   computerMoveImg.src = `images/${botMove.toLowerCase()}-emoji.png`;
+  movesContainer.style.display = "block";
 }
 
 function showMessage() {
