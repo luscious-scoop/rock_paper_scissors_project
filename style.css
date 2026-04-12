@@ -77,8 +77,15 @@ span {
 }
 
 /* ======moves====== */
-
+.outcome {
+  display: flex;
+  flex-direction: column;
+}
 .moves-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding: 24px 20px;
   font-size: 22px;
   display: flex;

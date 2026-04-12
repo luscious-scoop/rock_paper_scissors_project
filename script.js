@@ -1,6 +1,7 @@
 let humanScore = 0;
 let computerScore = 0;
 let result = "";
+
 let playerChoice = null;
 let computerChoice = null;
 let draws = 0;
@@ -44,23 +45,21 @@ function ShowMoves(playerMove, botMove) {
 
 function showMessage() {
   let resultDisplay = document.querySelector(".result-display");
-
-  if (result === "Tie") {
-    console.log(
-      `You picked ${playerChoice}. Computer picked ${computerChoice}. It's a Tie!`,
-    );
-  } else if (result === "Win") {
-    console.log(
-      `You picked ${playerChoice}. Computer picked ${computerChoice}. It's a Win!`,
-    );
-  } else if (result === "Lose") {
-    console.log(
-      `You picked ${playerChoice}. Computer picked ${computerChoice}. It's a Lose!`,
-    );
+  let finalResult = document.querySelector(".final-result");
+  if (humanScore === 5) {
+    finalResult.textContent = "You Won Against the Computer!";
+    resultDisplay.textContent = "";
+  } else if (computerScore === 5) {
+    finalResult.textContent = `You Lost Against the Computer!`;
+    resultDisplay.textContent = "";
+  } else if (draws === 5) {
+    finalResult.textContent = "It's a Draw against Computer";
+    resultDisplay.textContent = "";
+  } else {
+    resultDisplay.textContent = `${result.toUpperCase()}!`;
   }
 
   ShowMoves(playerChoice, computerChoice);
-  resultDisplay.textContent = `${result.toUpperCase()}!`;
 }
 /* function getHumanChoice(choice) {
   return choice;
