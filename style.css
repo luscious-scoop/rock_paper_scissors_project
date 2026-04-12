@@ -77,11 +77,7 @@ span {
 }
 
 /* ======moves====== */
-.moves {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+
 .moves-container {
   padding: 24px 20px;
   font-size: 22px;
@@ -98,4 +94,9 @@ span {
 
 .outcome {
   margin-top: 20px;
+}
+
+.moves,
+.result-container {
+  display: none;
 }

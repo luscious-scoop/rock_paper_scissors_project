@@ -43,6 +43,8 @@ function ShowMoves(playerMove, botMove) {
 }
 
 function showMessage() {
+  let resultDisplay = document.querySelector(".result-display");
+
   if (result === "Tie") {
     console.log(
       `You picked ${playerChoice}. Computer picked ${computerChoice}. It's a Tie!`,
@@ -58,12 +60,15 @@ function showMessage() {
   }
 
   ShowMoves(playerChoice, computerChoice);
+  resultDisplay.textContent = `${result.toUpperCase()}!`;
 }
 /* function getHumanChoice(choice) {
   return choice;
 } */
 
 function showScore() {
+  let scoreContainer = document.querySelector(".result-container");
+  scoreContainer.style.display = "flex";
   console.log(`Player score: ${humanScore}. Computer Score: ${computerScore}`);
   let userScore = document.querySelector("#user-score");
   let computerCount = document.querySelector("#computer-score");
