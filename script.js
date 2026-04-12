@@ -9,7 +9,7 @@ let draws = 0;
 /* const rockBtn = document.querySelector("#rock-btn");
 const paperBtn = document.querySelector("#paper-btn");
 const scissorsBtn = document.querySelector("#scissors-btn"); */
-let buttons = document.querySelectorAll("button");
+let buttons = document.querySelectorAll(".btn");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {

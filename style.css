@@ -107,3 +107,12 @@ span {
 .result-container {
   display: none;
 }
+
+.reset-btn {
+  display: none;
+  color: wheat;
+  padding: 18px 48px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #1f7a8c;
+}
