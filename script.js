@@ -48,9 +48,9 @@ function showMessage() {
     );
   }
 }
-function getHumanChoice(choice) {
+/* function getHumanChoice(choice) {
   return choice;
-}
+} */
 
 function showScore() {
   console.log(`Player score: ${humanScore}. Computer Score: ${computerScore}`);
@@ -58,11 +58,14 @@ function showScore() {
   let computerCount = document.querySelector("#computer-score");
   userScore.textContent = `User : ${humanScore}`;
   computerCount.textContent = `Computer ${computerScore}`;
+  let drawCount = document.querySelector("#draws");
+  drawCount.textContent = `Draws : ${draws}`;
 }
 
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === computerChoice.toLowerCase()) {
     result = "Tie";
+    draws++;
   } else if (humanChoice === "rock") {
     if (computerChoice === "Paper") {
       result = "Lose";
