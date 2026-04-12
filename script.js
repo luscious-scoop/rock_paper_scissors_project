@@ -53,6 +53,7 @@ function showMessage() {
       `You picked ${playerChoice}. Computer picked ${computerChoice}. It's a Lose!`,
     );
   }
+  playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
   ShowPlayerMoves(playerChoice, computerChoice);
 }
 /* function getHumanChoice(choice) {
