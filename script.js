@@ -32,6 +32,12 @@ function getComputerChoice() {
 
   return computerChoice;
 }
+function ShowPlayerMoves(playerMove, botMove) {
+  const userMove = document.querySelector(".user");
+  const computerMove = document.querySelector(".computer");
+  userMove.textContent = `User: ${playerMove}`;
+  computerMove.textContent = `computer: ${botMove}`;
+}
 
 function showMessage() {
   if (result === "Tie") {
@@ -47,6 +53,7 @@ function showMessage() {
       `You picked ${playerChoice}. Computer picked ${computerChoice}. It's a Lose!`,
     );
   }
+  ShowPlayerMoves(playerChoice, computerChoice);
 }
 /* function getHumanChoice(choice) {
   return choice;
@@ -57,7 +64,7 @@ function showScore() {
   let userScore = document.querySelector("#user-score");
   let computerCount = document.querySelector("#computer-score");
   userScore.textContent = `User : ${humanScore}`;
-  computerCount.textContent = `Computer ${computerScore}`;
+  computerCount.textContent = `Computer : ${computerScore}`;
   let drawCount = document.querySelector("#draws");
   drawCount.textContent = `Draws : ${draws}`;
 }
