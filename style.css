@@ -48,7 +48,7 @@ h1 {
   margin-top: 10px;
 }
 .container {
-  border: 2px solid yellow;
+  /*  border: 2px solid yellow; */
   /*   min-height: 100vh; */
   display: flex;
   flex-direction: column;
@@ -86,7 +86,7 @@ span {
   padding: 24px 20px;
   font-size: 22px;
   display: flex;
-  border: 2px solid red;
+  background-color: transparent;
   gap: 15px;
 }
 
@@ -96,6 +96,6 @@ span {
   text-align: center;
 }
 
-.moves {
-  display: none;
+.outcome {
+  margin-top: 20px;
 }
