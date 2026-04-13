@@ -14,14 +14,14 @@ buttons.forEach((button) => {
 });
 
 function getComputerChoice() {
-  let randomNumber = Math.random();
+  let randomNumber = Math.floor(Math.random() * 3);
 
   let computerChoice = "";
-  if (randomNumber >= 0 && randomNumber < 1 / 3) {
+  if (randomNumber === 0) {
     computerChoice = "Rock";
-  } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+  } else if (randomNumber === 1) {
     computerChoice = "Paper";
-  } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+  } else {
     computerChoice = "Scissors";
   }
 
@@ -47,9 +47,6 @@ function showMessage() {
     resultDisplay.textContent = "";
   } else if (computerScore === 5) {
     finalResult.textContent = `You Lost Against the Computer!`;
-    resultDisplay.textContent = "";
-  } else if (draws === 5) {
-    finalResult.textContent = "It's a Draw against Computer";
     resultDisplay.textContent = "";
   } else {
     resultDisplay.textContent = `${result.toUpperCase()}!`;
@@ -106,9 +103,8 @@ function playGame(playerMove) {
   playerChoice = playerMove;
   computerChoice = getComputerChoice();
   playRound(playerMove, computerChoice);
-  console.log(humanScore);
 
-  if (humanScore === 5 || computerScore === 5 || draws === 5) {
+  if (humanScore === 5 || computerScore === 5) {
     buttons.forEach((button) => {
       button.disabled = "true";
     });
