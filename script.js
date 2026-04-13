@@ -2,8 +2,7 @@ let humanScore = 0;
 let computerScore = 0;
 let result = "";
 
-let playerChoice = null;
-let computerChoice = null;
+let playerChoice = "";
 let draws = 0;
 
 let buttons = document.querySelectorAll(".btn");
