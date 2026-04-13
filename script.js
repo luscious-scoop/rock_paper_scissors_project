@@ -1,10 +1,11 @@
 let humanScore = 0;
 let computerScore = 0;
 let result = "";
-
+let movesContainer = document.querySelector(".moves");
 let playerChoice = null;
 let computerChoice = null;
 let draws = 0;
+let scoreContainer = document.querySelector(".result-container");
 
 /* const rockBtn = document.querySelector("#rock-btn");
 const paperBtn = document.querySelector("#paper-btn");
@@ -13,9 +14,7 @@ let buttons = document.querySelectorAll(".btn");
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    playerChoice = button.dataset.name;
-    computerChoice = getComputerChoice();
-    playRound(playerChoice, computerChoice);
+    playGame(button.dataset.name);
   });
 });
 //don't need to change this
@@ -34,11 +33,11 @@ function getComputerChoice() {
   return computerChoice;
 }
 function ShowMoves(playerMove, botMove) {
-  let movesContainer = document.querySelector(".moves");
   let UserMoveImg = document.querySelector(".user-img");
   let computerMoveImg = document.querySelector(".computer-img");
 
   UserMoveImg.src = `images/${playerMove}-emoji.png`;
+
   computerMoveImg.src = `images/${botMove.toLowerCase()}-emoji.png`;
   movesContainer.style.display = "block";
 }
@@ -63,7 +62,6 @@ function showMessage() {
 }
 
 function showScore() {
-  let scoreContainer = document.querySelector(".result-container");
   scoreContainer.style.display = "flex";
   console.log(`Player score: ${humanScore}. Computer Score: ${computerScore}`);
   let userScore = document.querySelector("#user-score");
@@ -105,4 +103,27 @@ function playRound(humanChoice, computerChoice) {
   }
   showMessage();
   showScore();
+}
+function playGame(playerMove) {
+  playerChoice = playerMove;
+  computerChoice = getComputerChoice();
+  playRound(playerMove, computerChoice);
+  console.log(humanScore);
+
+  if (humanScore === 5 || computerScore === 5 || draws === 5) {
+    resetGame();
+  }
+}
+
+function resetGame() {
+  let resetButton = document.querySelector(".reset-btn");
+  resetButton.style.display = "block";
+  resetButton.addEventListener("click", () => {
+    humanScore = 0;
+    computerScore = 0;
+    draws = 0;
+    movesContainer.style.display = "none";
+    scoreContainer.style.display = "none";
+    resetButton.style.display = "none";
+  });
 }
