@@ -6,6 +6,8 @@ let playerChoice = null;
 let computerChoice = null;
 let draws = 0;
 let scoreContainer = document.querySelector(".result-container");
+let resultDisplay = document.querySelector(".result-display");
+let finalResult = document.querySelector(".final-result");
 
 /* const rockBtn = document.querySelector("#rock-btn");
 const paperBtn = document.querySelector("#paper-btn");
@@ -43,8 +45,6 @@ function ShowMoves(playerMove, botMove) {
 }
 
 function showMessage() {
-  let resultDisplay = document.querySelector(".result-display");
-  let finalResult = document.querySelector(".final-result");
   if (humanScore === 5) {
     finalResult.textContent = "You Won Against the Computer!";
     resultDisplay.textContent = "";
@@ -111,6 +111,9 @@ function playGame(playerMove) {
   console.log(humanScore);
 
   if (humanScore === 5 || computerScore === 5 || draws === 5) {
+    buttons.forEach((button) => {
+      button.disabled = "true";
+    });
     resetGame();
   }
 }
@@ -125,5 +128,11 @@ function resetGame() {
     movesContainer.style.display = "none";
     scoreContainer.style.display = "none";
     resetButton.style.display = "none";
+    resultDisplay.textContent = "";
+    finalResult.textContent = "";
+
+    buttons.forEach((button) => {
+      button.disabled = false;
+    });
   });
 }
