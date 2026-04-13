@@ -2,7 +2,6 @@ let humanScore = 0;
 let computerScore = 0;
 let result = "";
 
-let playerChoice = "";
 let draws = 0;
 
 let buttons = document.querySelectorAll(".btn");
@@ -99,7 +98,6 @@ function playRound(humanChoice, computerChoice) {
   ShowMoves(humanChoice, computerChoice);
 }
 function playGame(playerMove) {
-  playerChoice = playerMove;
   let computerChoice;
   computerChoice = getComputerChoice();
   playRound(playerMove, computerChoice);
