@@ -105,14 +105,14 @@ function playGame(playerMove) {
   playRound(playerMove, computerChoice);
 
   if (humanScore === 5 || computerScore === 5) {
-    buttons.forEach((button) => {
-      button.disabled = "true";
-    });
     resetGame();
   }
 }
 
 function resetGame() {
+  buttons.forEach((button) => {
+    button.disabled = "true";
+  });
   let resetButton = document.querySelector(".reset-btn");
   resetButton.style.display = "block";
   resetButton.addEventListener("click", () => {
