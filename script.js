@@ -1,13 +1,10 @@
 let humanScore = 0;
 let computerScore = 0;
 let result = "";
-let movesContainer = document.querySelector(".moves");
+
 let playerChoice = null;
 let computerChoice = null;
 let draws = 0;
-let scoreContainer = document.querySelector(".result-container");
-let resultDisplay = document.querySelector(".result-display");
-let finalResult = document.querySelector(".final-result");
 
 /* const rockBtn = document.querySelector("#rock-btn");
 const paperBtn = document.querySelector("#paper-btn");
@@ -19,7 +16,7 @@ buttons.forEach((button) => {
     playGame(button.dataset.name);
   });
 });
-//don't need to change this
+
 function getComputerChoice() {
   let randomNumber = Math.random();
 
@@ -41,10 +38,14 @@ function ShowMoves(playerMove, botMove) {
   UserMoveImg.src = `images/${playerMove}-emoji.png`;
 
   computerMoveImg.src = `images/${botMove.toLowerCase()}-emoji.png`;
+  let movesContainer = document.querySelector(".moves");
   movesContainer.style.display = "block";
 }
 
 function showMessage() {
+  let resultDisplay = document.querySelector(".result-display");
+  let finalResult = document.querySelector(".final-result");
+
   if (humanScore === 5) {
     finalResult.textContent = "You Won Against the Computer!";
     resultDisplay.textContent = "";
@@ -62,6 +63,7 @@ function showMessage() {
 }
 
 function showScore() {
+  let scoreContainer = document.querySelector(".result-container");
   scoreContainer.style.display = "flex";
   console.log(`Player score: ${humanScore}. Computer Score: ${computerScore}`);
   let userScore = document.querySelector("#user-score");
@@ -122,17 +124,6 @@ function resetGame() {
   let resetButton = document.querySelector(".reset-btn");
   resetButton.style.display = "block";
   resetButton.addEventListener("click", () => {
-    humanScore = 0;
-    computerScore = 0;
-    draws = 0;
-    movesContainer.style.display = "none";
-    scoreContainer.style.display = "none";
-    resetButton.style.display = "none";
-    resultDisplay.textContent = "";
-    finalResult.textContent = "";
-
-    buttons.forEach((button) => {
-      button.disabled = false;
-    });
+    window.location.reload();
   });
 }
