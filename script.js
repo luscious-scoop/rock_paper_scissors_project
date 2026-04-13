@@ -1,9 +1,7 @@
 let humanScore = 0;
 let computerScore = 0;
 let result = "";
-
 let draws = 0;
-
 let buttons = document.querySelectorAll(".btn");
 
 buttons.forEach((button) => {
