@@ -51,8 +51,6 @@ function showMessage() {
   } else {
     resultDisplay.textContent = `${result.toUpperCase()}!`;
   }
-
-  ShowMoves(playerChoice, computerChoice);
 }
 
 function showScore() {
@@ -98,9 +96,11 @@ function playRound(humanChoice, computerChoice) {
   }
   showMessage();
   showScore();
+  ShowMoves(humanChoice, computerChoice);
 }
 function playGame(playerMove) {
   playerChoice = playerMove;
+  let computerChoice;
   computerChoice = getComputerChoice();
   playRound(playerMove, computerChoice);
 
